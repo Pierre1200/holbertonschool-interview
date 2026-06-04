@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+"""
+Module de parsing de logs en temps réel.
+
+Ce script lit les logs ligne par ligne depuis l'entrée standard (stdin),
+analyse leur contenu et calcule des métriques cumulées (taille totale
+des fichiers et nombre d'occurrences par code statut).
+Les statistiques sont affichées toutes les 10 lignes valides et/ou
+lors d'une interruption clavier (CTRL+C).
+"""
 import sys
 
 taille_totale = 0
@@ -16,6 +25,13 @@ status_counts = {
 
 
 def print_stats():
+    """
+    Affiche les statistiques accumulées dans la console.
+
+    Affiche d'abord la taille totale cumulée de tous les fichiers,
+    puis le nombre de lignes lues pour chaque code statut (uniquement
+    si le code a été rencontré au moins une fois), triés par ordre croissant.
+    """
     print("File size: {}".format(taille_totale))
     for code, count in sorted(status_counts.items()):
         if count > 0:
