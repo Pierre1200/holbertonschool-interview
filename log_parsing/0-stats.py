@@ -51,14 +51,13 @@ if __name__ == "__main__":
                 statut = int(statut_potentiel)
             except ValueError:
                 continue
-
             taille_totale += taille
             if statut in status_counts:
                 status_counts[statut] += 1
-            compteur += 1
-            if compteur == 10:
-                print_stats()
-                compteur = 0
+                compteur += 1
+                if compteur == 10:
+                    print_stats()
+                    compteur = 0
         print_stats()
 
     except KeyboardInterrupt:
