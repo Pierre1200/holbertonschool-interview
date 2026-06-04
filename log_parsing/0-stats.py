@@ -59,6 +59,7 @@ if __name__ == "__main__":
             if compteur == 10:
                 print_stats()
                 compteur = 0
+        print_stats()
 
     except KeyboardInterrupt:
         print_stats()
