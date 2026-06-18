@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Module pour résoudre le problème des N-Reines (N-Queens Puzzle).
 Utilise un algorithme de backtracking pour trouver toutes les solutions.
