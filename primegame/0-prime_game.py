@@ -3,7 +3,7 @@
 
 Maria and Ben take turns picking a prime number from the set
 {1, 2, ..., n} and removing that prime and all of its multiples
-from the set. The player who cannot make a move loses.
+set. The player who cannot make a move loses.
 """
 
 
